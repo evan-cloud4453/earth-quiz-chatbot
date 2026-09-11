@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 830" width="1520" height="830"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#38455A"/>
+    </marker>
+  </defs>
+
+  <rect width="1520" height="830" fill="#F7F8FA"/>
+
+  <!-- ── Title ─────────────────────────────────────────── -->
+  <text x="34" y="52" font-size="22" font-weight="700" fill="#1B2430">지구퀴즈 봇 — 시스템 아키텍처</text>
+  <text x="34" y="78" font-size="13" fill="#6B7280">서버·백엔드 없이, 카카오톡 알림을 후킹하는 안드로이드 단말 한 대에서 전부 동작한다.</text>
+
+  <!-- ══ A. 사용자 ══════════════════════════════════════ -->
+  <rect x="30" y="120" width="190" height="620" rx="10" fill="#FFFFFF" stroke="#D8DEE7"/>
+  <text x="46" y="148" font-size="15" font-weight="700" fill="#38455A">사용자</text>
+
+  <rect x="46" y="180" width="158" height="100" rx="8" fill="#EEF1F5" stroke="#9AA5B4"/>
+  <text x="62" y="208" font-size="14" font-weight="700" fill="#38455A">학생</text>
+  <text x="62" y="232" font-size="11.5" fill="#5B6779">과외 수강생</text>
+  <text x="62" y="250" font-size="11.5" fill="#5B6779">퀴즈 참여 · 정답 입력</text>
+  <text x="62" y="268" font-size="11.5" fill="#5B6779">개념 질문</text>
+
+  <rect x="46" y="350" width="158" height="105" rx="8" fill="#EEF1F5" stroke="#9AA5B4"/>
+  <text x="62" y="378" font-size="14" font-weight="700" fill="#38455A">문항 공모 참여자</text>
+  <text x="62" y="402" font-size="11.5" fill="#5B6779">오픈채팅방 멤버</text>
+  <text x="62" y="420" font-size="11.5" fill="#5B6779">빈칸 문항 제출</text>
+  <text x="62" y="440" font-size="11.5" fill="#8894A6" font-style="italic">#문장에 ㅁㅁ#정답</text>
+
+  <rect x="46" y="520" width="158" height="95" rx="8" fill="#EEF1F5" stroke="#9AA5B4"/>
+  <text x="62" y="548" font-size="14" font-weight="700" fill="#38455A">관리자</text>
+  <text x="62" y="572" font-size="11.5" fill="#5B6779">공모 문항 검수</text>
+  <text x="62" y="590" font-size="11.5" fill="#5B6779">퀴즈 잠금 · 사용자 차단</text>
+  <text x="62" y="608" font-size="11.5" fill="#5B6779">덱 이관</text>
+
+  <!-- ══ B. 카카오톡 ════════════════════════════════════ -->
+  <rect x="280" y="120" width="230" height="620" rx="10" fill="#FFFFFF" stroke="#D8DEE7"/>
+  <text x="296" y="148" font-size="15" font-weight="700" fill="#7A6200">카카오톡</text>
+
+  <rect x="296" y="180" width="198" height="100" rx="8" fill="#FFF8D6" stroke="#E6C200"/>
+  <text x="312" y="208" font-size="14" font-weight="700" fill="#4A3A00">퀴즈방</text>
+  <text x="312" y="232" font-size="11.5" fill="#6B5A1E">과외 학생 단체방</text>
+  <text x="312" y="250" font-size="11.5" fill="#6B5A1E">출제 · 채점 · 랭킹이</text>
+  <text x="312" y="268" font-size="11.5" fill="#6B5A1E">대화로 흘러간다</text>
+
+  <rect x="296" y="350" width="198" height="105" rx="8" fill="#FFF8D6" stroke="#E6C200"/>
+  <text x="312" y="378" font-size="14" font-weight="700" fill="#4A3A00">수능 지구과학 연구소</text>
+  <text x="312" y="402" font-size="11.5" fill="#6B5A1E">카카오톡 오픈채팅방</text>
+  <text x="312" y="420" font-size="11.5" fill="#6B5A1E">문항 공모 창구</text>
+  <text x="312" y="440" font-size="11.5" fill="#6B5A1E">30문항 수집</text>
+
+  <rect x="296" y="520" width="198" height="95" rx="8" fill="#FFF8D6" stroke="#E6C200"/>
+  <text x="312" y="548" font-size="14" font-weight="700" fill="#4A3A00">지퀴관리자</text>
+  <text x="312" y="572" font-size="11.5" fill="#6B5A1E">운영 전용 방</text>
+  <text x="312" y="590" font-size="11.5" fill="#6B5A1E">관리자 등록 · 검수 명령</text>
+
+  <!-- ══ C. 안드로이드 단말 ═════════════════════════════ -->
+  <rect x="570" y="120" width="400" height="620" rx="10" fill="#FFFFFF" stroke="#D8DEE7"/>
+  <text x="586" y="146" font-size="15" font-weight="700" fill="#14459E">안드로이드 단말 · Messenger Bot R</text>
+  <text x="586" y="168" font-size="11.5" fill="#6B7280">알림 후킹 → response(room, msg, sender, replier) → 알림으로 답장</text>
+
+  <rect x="586" y="186" width="368" height="140" rx="8" fill="#E8F0FE" stroke="#2F6FED"/>
+  <text x="602" y="212" font-size="14" font-weight="700" fill="#14459E">earth-quiz</text>
+  <text x="602" y="234" font-size="11.5" fill="#33476B">· 6개 덱 중 무작위 선택 → 빈칸 □ 로 출제</text>
+  <text x="602" y="254" font-size="11.5" fill="#33476B">· 정답과 글자 수가 같은 메시지만 채점</text>
+  <text x="602" y="274" font-size="11.5" fill="#33476B">· 힌트는 한 글자씩 공개 / 1글자 오답은 5초 뮤트</text>
+  <text x="602" y="294" font-size="11.5" fill="#33476B">· 프로필 이미지 해시로 관리자 인증</text>
+  <text x="602" y="314" font-size="11.5" fill="#33476B">· 방별 정답 횟수 집계</text>
+
+  <rect x="586" y="346" width="368" height="120" rx="8" fill="#E8F0FE" stroke="#2F6FED"/>
+  <text x="602" y="372" font-size="14" font-weight="700" fill="#14459E">quiz-submit</text>
+  <text x="602" y="394" font-size="11.5" fill="#33476B">· 등록 시 빈칸 개수 = 정답 글자 수 자동 검증</text>
+  <text x="602" y="414" font-size="11.5" fill="#33476B">· 통과한 문항을 공모 덱에 적재</text>
+  <text x="602" y="434" font-size="11.5" fill="#33476B">· 검색 · 목록 · 삭제로 검수</text>
+  <text x="602" y="454" font-size="11.5" fill="#33476B">· 검수 통과분만 정식 덱으로 이관</text>
+
+  <rect x="586" y="486" width="368" height="100" rx="8" fill="#E8F0FE" stroke="#2F6FED"/>
+  <text x="602" y="512" font-size="14" font-weight="700" fill="#14459E">gemini-chat</text>
+  <text x="602" y="534" font-size="11.5" fill="#33476B">· ? 새 질문 / ! 직전 맥락을 이어서 질문</text>
+  <text x="602" y="554" font-size="11.5" fill="#33476B">· 최근 6턴 대화 버퍼 유지</text>
+  <text x="602" y="574" font-size="11.5" fill="#33476B">· 긴 답변 방지 프롬프트 자동 부착</text>
+
+  <text x="586" y="632" font-size="11.5" fill="#6B7280">AbleRooms 화이트리스트로 동작할 방을 제한 — 등록되지 않은 방에서는 무반응.</text>
+  <text x="586" y="652" font-size="11.5" fill="#6B7280">방별 게임 상태(출제 중 여부 · 현재 정답 · 힌트 진행도)는 메모리에 보관한다.</text>
+
+  <!-- ══ D. 로컬 데이터 ═════════════════════════════════ -->
+  <rect x="1060" y="120" width="420" height="440" rx="10" fill="#FFFFFF" stroke="#D8DEE7"/>
+  <text x="1076" y="148" font-size="15" font-weight="700" fill="#1E6B2C">/sdcard/EarthQuiz/ · 로컬 JSON</text>
+
+  <rect x="1076" y="176" width="388" height="200" rx="8" fill="#E9F7EC" stroke="#3FA34D"/>
+  <text x="1092" y="202" font-size="14" font-weight="700" fill="#1E6B2C">questions/ — 문항 덱 (읽기 전용)</text>
+  <text x="1092" y="228" font-size="11.5" fill="#2F5B39">earth-science · 수능 지구과학 전범위 — 1,623</text>
+  <text x="1092" y="250" font-size="11.5" fill="#2F5B39">general-knowledge · 일반 상식 — 450</text>
+  <text x="1092" y="272" font-size="11.5" fill="#2F5B39">nonsense · 넌센스 — 412</text>
+  <text x="1092" y="294" font-size="11.5" fill="#2F5B39">korean-history · 한국사 — 345</text>
+  <text x="1092" y="316" font-size="11.5" fill="#2F5B39">science-trivia · 과학 상식 — 139</text>
+  <text x="1092" y="338" font-size="11.5" fill="#2F5B39">earth-science-submissions · 공모 대기 — 30</text>
+  <text x="1092" y="362" font-size="12" font-weight="700" fill="#1E6B2C">합계 2,999 문항</text>
+
+  <rect x="1076" y="396" width="388" height="140" rx="8" fill="#E9F7EC" stroke="#3FA34D"/>
+  <text x="1092" y="422" font-size="14" font-weight="700" fill="#1E6B2C">runtime/ — 봇이 기록 (첫 실행 시 자동 생성)</text>
+  <text x="1092" y="448" font-size="11.5" fill="#2F5B39">rank.json · 방별 정답 횟수 랭킹</text>
+  <text x="1092" y="470" font-size="11.5" fill="#2F5B39">rooms.json · 방별 참여자 명단</text>
+  <text x="1092" y="492" font-size="11.5" fill="#2F5B39">admin.json · 관리자 프로필 이미지 해시</text>
+  <text x="1092" y="514" font-size="11.5" fill="#2F5B39">cutoff.json · 차단 사용자</text>
+
+  <!-- ══ E. 외부 API ════════════════════════════════════ -->
+  <rect x="1060" y="600" width="420" height="140" rx="10" fill="#FFFFFF" stroke="#D8DEE7"/>
+  <text x="1076" y="628" font-size="15" font-weight="700" fill="#4B23B5">외부 API</text>
+
+  <rect x="1076" y="642" width="388" height="82" rx="8" fill="#F0EAFE" stroke="#7C4DFF"/>
+  <text x="1092" y="668" font-size="14" font-weight="700" fill="#4B23B5">Google Gemini 1.5 Flash</text>
+  <text x="1092" y="692" font-size="11.5" fill="#4A3B76">generativelanguage.googleapis.com</text>
+  <text x="1092" y="712" font-size="11.5" fill="#4A3B76">fetch 미지원 환경 — 번들된 Jsoup으로 직접 POST</text>
+
+  <!-- ══ Arrows ════════════════════════════════════════ -->
+  <g stroke="#38455A" stroke-width="1.7" fill="none" marker-end="url(#ar)">
+    <!-- 사용자 → 카카오톡 -->
+    <path d="M204,230 H280"/>
+    <path d="M204,402 H280"/>
+    <path d="M204,567 H280"/>
+
+    <!-- 카카오톡 → 봇 -->
+    <path d="M494,230 H570"/>
+    <path d="M494,252 H535 V536 H570"/>
+    <path d="M494,402 H570"/>
+
+    <!-- 봇 → 문항 덱 (읽기) -->
+    <path d="M954,240 H1060"/>
+  </g>
+
+  <!-- 관리자 명령 (점선) -->
+  <path d="M494,567 H552 V300 H570" stroke="#38455A" stroke-width="1.7" fill="none"
+        stroke-dasharray="5 4" marker-end="url(#ar)"/>
+
+  <!-- 양방향 -->
+  <g stroke="#38455A" stroke-width="1.7" fill="none" marker-end="url(#ar)" marker-start="url(#ar)">
+    <path d="M954,300 H1012 V466 H1060"/>
+    <path d="M954,406 H1032 V340 H1060"/>
+    <path d="M954,536 H1018 V683 H1060"/>
+  </g>
+
+  <!-- 답장 경로 -->
+  <path d="M770,740 V792 H395 V740" stroke="#38455A" stroke-width="1.7" fill="none" marker-end="url(#ar)"/>
+  <text x="582" y="784" font-size="12" fill="#38455A" text-anchor="middle">알림으로 답장 — 문제 · 힌트 · 채점 결과 · 랭킹 · AI 답변</text>
+
+  <!-- 화살표 라벨 -->
+  <text x="1010" y="232" font-size="11" fill="#56637A" text-anchor="middle">읽기</text>
+  <text x="983" y="292" font-size="11" fill="#56637A" text-anchor="middle">기록</text>
+  <text x="993" y="398" font-size="11" fill="#56637A" text-anchor="middle">읽기 · 쓰기</text>
+  <text x="986" y="528" font-size="11" fill="#56637A" text-anchor="middle">POST</text>
+  <text x="553" y="176" font-size="11" fill="#56637A" text-anchor="middle">알림</text>
+  <text x="242" y="176" font-size="11" fill="#56637A" text-anchor="middle">메시지</text>
+</svg>

@@ -26,20 +26,9 @@ Revision homework was consistently ignored — not for lack of ability, but beca
 
 ## 어떻게 돌아가나
 
-Messenger Bot R은 서버가 아니라 **카카오톡 알림을 가로채 답장하는 방식**이라 별도 백엔드가 필요 없습니다. 대신 `fetch`가 없어 네트워크 호출은 번들된 Jsoup으로 직접 POST해야 하고, 상태는 전부 로컬 JSON 파일에 직렬화해야 합니다. 그 제약이 설계의 대부분을 결정했습니다.
+![지구퀴즈 봇 시스템 아키텍처](assets/architecture.svg)
 
-```
-카카오톡 알림 → Messenger Bot R → response() → 알림으로 답장
-                      │
-                      ├─ earth-quiz     출제 · 채점 · 힌트 · 랭킹 · 관리자
-                      ├─ quiz-submit    공모 문항 등록 · 검색 · 검수
-                      └─ gemini-chat    ? / ! 질의응답
-                      │
-                      ▼
-              /sdcard/EarthQuiz/
-                      ├─ questions/  문항 덱 (읽기 전용)
-                      └─ runtime/    랭킹 · 방 명단 · 관리자 (실행 중 생성)
-```
+Messenger Bot R은 서버가 아니라 **카카오톡 알림을 가로채 답장하는 방식**이라 별도 백엔드가 필요 없습니다. 대신 `fetch`가 없어 네트워크 호출은 번들된 Jsoup으로 직접 POST해야 하고, 상태는 전부 로컬 JSON 파일에 직렬화해야 합니다. 그 제약이 설계의 대부분을 결정했습니다.
 
 ## 명령어
 

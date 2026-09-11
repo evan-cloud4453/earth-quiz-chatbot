@@ -1,0 +1,17 @@
+{
+    "main": "gemini-chat.js",
+    "option": {
+        "apiLevel": 1,
+        "useUnifiedParams": false,
+        "useConsoleApi": true,
+        "useBabel": false,
+        "scriptPower": true,
+        "debugRoom": {
+            "name": "DEBUG ROOM",
+            "sender": "DEBUG SENDER",
+            "isGroupChat": false,
+            "packageName": "com.xfl.msgbot",
+            "channelId": 0
+        }
+    }
+}

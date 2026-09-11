@@ -1,0 +1,18 @@
+[
+	{
+		"name": "🎯 퀴즈방 🎯",
+		"members": [
+			"학생A",
+			"학생B",
+			"학생C"
+		],
+		"memberCount": 3
+	},
+	{
+		"name": "DEBUG ROOM",
+		"members": [
+			"DEBUG SENDER"
+		],
+		"memberCount": 1
+	}
+]
